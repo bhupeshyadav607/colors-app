@@ -12,7 +12,7 @@ const RestorePaletteDialog = ({ isRestoring }) => {
 
   const handleRestore = () => {
     window.localStorage.clear();
-    window.location.reload();
+    navigate("/");
   };
 
   return (
@@ -27,6 +27,9 @@ const RestorePaletteDialog = ({ isRestoring }) => {
         <DialogContentText>
           Go ahead and create a brand new Palette, or, you can restore the
           original palettes by clicking on the button below.
+        </DialogContentText>
+        <DialogContentText>
+          (Note: Please reload the app after restoration)
         </DialogContentText>
         <DialogActions>
           <Button
